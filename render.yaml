@@ -7,3 +7,6 @@ services:
       name: data
       mountPath: /data/db
       sizeGB: 10
+    ports:
+      - port: 27017
+        protocol: tcp
