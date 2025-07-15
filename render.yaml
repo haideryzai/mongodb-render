@@ -1,17 +1,8 @@
 services:
-  - type: web
+  - type: pserv
     name: mongodb
     env: docker
-    autoDeploy: false
     disk:
       name: data
       mountPath: /data/db
       sizeGB: 10
-    ports:
-      - port: 27017
-        protocol: tcp
-    envVars:
-      - key: MONGO_INITDB_ROOT_USERNAME
-        value: rootUser
-      - key: MONGO_INITDB_ROOT_PASSWORD
-        value: rootPassword123
