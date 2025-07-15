@@ -10,3 +10,8 @@ services:
     ports:
       - port: 27017
         protocol: tcp
+    envVars:
+      - key: MONGO_INITDB_ROOT_USERNAME
+        value: rootUser
+      - key: MONGO_INITDB_ROOT_PASSWORD
+        value: rootPassword123
