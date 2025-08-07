@@ -12,3 +12,4 @@ services:
         value: rootUser
       - key: MONGO_INITDB_ROOT_PASSWORD
         value: rootPassword123
+    healthCheckPath: ""  # <–– this disables default HTTP health checks
