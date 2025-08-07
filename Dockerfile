@@ -1,7 +1,8 @@
 FROM mongo:6.0
 
-# Expose the MongoDB port
 EXPOSE 27017
 
-# Command to run MongoDB and allow external access
+# Healthcheck to prevent Render from doing HTTPS probing
+HEALTHCHECK --interval=10s --timeout=5s --start-period=5s CMD mongo --eval "db.adminCommand('ping')" || exit 1
+
 CMD ["mongod", "--bind_ip", "0.0.0.0"]
